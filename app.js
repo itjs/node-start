@@ -1,6 +1,6 @@
 const http = require('http');
 const hostname = 'localhost';
-const port = 3000;
+const port = 3035;
 
 var friends = require("./friends.json"); // Once for all times
 
