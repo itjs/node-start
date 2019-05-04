@@ -1,5 +1,5 @@
 const http = require('http');
-const hostname = 'localhost';
+const hostname = 'leia.cs.spu.edu';
 const port = 3035;
 
 var friends = require("./friends.json"); // Once for all times
