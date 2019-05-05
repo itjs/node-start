@@ -1,5 +1,5 @@
 const http = require('http');
-const hostname = 'localhost';
+const hostname = 'leia.cs.spu.edu';
 const port = 3035;
 
 var friends = require("./friends2.json"); // Once for all times
@@ -44,7 +44,8 @@ const server = http.createServer((request, response) => {
         '                       <tbody> \n'
     );
 	for (var key in friends)
-	        for (var f in friends[key]["boys"])
+  key ="boys";
+	        for (var f in friends[key])
 	            response.write(
 	                '                               <tr> \n' +
 	                '                                       <td>' + friends[key][f]["firstName"] + '</td> \n' +
@@ -58,7 +59,7 @@ const server = http.createServer((request, response) => {
 	        '               </table> \n'
         );
       response.write(
-          '              <h1>Girls</h1>'
+          '              <h1>Girls:</h1>'
       );
       response.write(
           '               <table class="table table-bordered table-hover"> \n' +
@@ -72,7 +73,8 @@ const server = http.createServer((request, response) => {
           '                       <tbody> \n'
       );
       for (var key in friends)
-    	        for (var f in friends[key]["girls"])
+      key="girls";
+    	        for (var f in friends[key])
     	            response.write(
     	                '                               <tr> \n' +
     	                '                                       <td>' + friends[key][f]["firstName"] + '</td> \n' +
